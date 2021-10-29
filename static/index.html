@@ -59,8 +59,9 @@
         player.load(manifestUri).then(() => {
                   // This runs if the asynchronous load is successful.
         console.log('The video has now been loaded!');
+                document.getElementById('video').currentTime = 4;
+
         });
-        document.getElementById('video').currentTime = 4;
 
       } catch (error) {
         onPlayerError(error);

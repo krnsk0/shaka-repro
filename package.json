@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "simplehttpserver static"
+    "start": "cd static && http-live -m 500 -x 500 -p 8000"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "simplehttpserver": "^0.3.0"
+    "http-live-simulator": "^1.0.8"
   }
 }
