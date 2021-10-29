@@ -56,12 +56,9 @@
       // Try to load a manifest.
       // This is an asynchronous process.
       try {
-        player.load(manifestUri).then(() => {
-                  // This runs if the asynchronous load is successful.
-        console.log('The video has now been loaded!');
-                document.getElementById('video').currentTime = 4;
-
-        });
+        player.load(manifestUri, 4).then(() => {
+          document.getElementById('video').currentTime = 2
+        })
 
       } catch (error) {
         onPlayerError(error);
