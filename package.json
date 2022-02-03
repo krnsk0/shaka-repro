@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cd static && http-live -m 300 -x 300 -p 8000"
+    "start": "cd static && http-live --min-delay 300 --max-delay 300 -p 8000"
   },
   "author": "",
   "license": "ISC",
