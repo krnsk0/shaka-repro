@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cd static && http-live --min-delay 300 --max-delay 300 -p 8000"
+    "serve-fixed": "cd node_modules/@castify/shaka-player-fixed/dist && http-live -p 5001",
+    "serve-broken": "cd node_modules/shaka-player/dist && http-live -p 5000",
+    "serve-demo": "cd static && http-live --min-delay 300 --max-delay 300 -p 8000",
+    "start": "npm run serve-fixed & npm run serve-broken & npm run serve-demo & sleep 5 && open http://localhost:8000/broken.html && open http://localhost:8000/fixed.html"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "http-live-simulator": "^1.0.8"
+    "http-live-simulator": "^1.0.8",
+    "@castify/shaka-player-fixed": "screencastify/shaka-player#b82f08db2db41a7e1f198c39ecab0d3e6e5594cc",
+    "shaka-player": "3.2.0"
   }
 }
